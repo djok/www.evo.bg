@@ -1,0 +1,268 @@
+# Site settings
+baseurl = "http://www.evo.bg/"
+languageCode = "en-us"
+title = "EVO.bg"
+theme = "hugo-agency-theme"
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
+
+[params]
+
+	# You can use Markdown syntax for urls [text](//url.to/source) or
+	# most longer texts.
+	#
+	# All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
+	# for more icons. The icons are represented by their corresponding
+	# CSS class.
+
+	# To provide some metadata for search engines feel free to add a few
+    # information about you and your website.
+	name = "Your name"
+	description = "Your description"
+
+	# Since this template is static, the contact form uses www.formspree.io as a
+	# proxy. The form makes a POST request to their servers to send the actual
+	# email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+	email = "rosen.velikov@evo.bg"
+
+    # Link custom assets relative to /statuc
+    custom_css = []
+    custom_js  = []
+
+
+	# Navigation
+	[params.navigation]
+		brand = "evobg.png"
+		services = "Services"
+		portfolio = "Project"
+		about = "About Us"
+		team = "Our Teams"
+		contact = "Contact"
+
+    # Add custom links. Those can be pre- and postpended to the default menu above.
+    # Use the weight attribute to order your custom links. Uncomment the example
+    # below and replace the values with your own.
+
+    # prepended links
+    #[[menu.prepend]]
+    #    url = "http://gohugo.io"
+    #    name = "Hugo"
+    #    weight = 10
+
+    # postpended links
+    #[[menu.postpend]]
+    #    url = "http://gohugo.io"
+    #    name = "External link"
+    #    weight = 10
+
+
+	# Hero section
+	[params.hero]
+		# To change the background image of the hero, replace 'header-bg.jpg' in
+		# the 'static/img' folder.
+		title = ""
+		subtitle = ""
+		buttonText = "Tell me more"
+
+
+	# Services section
+	[params.services]
+        enable = true
+		title = "Services"
+		subtitle =  "EVO.bg builds and services all types of communication networks for customers across Bulgaria. From wireline to wireless, from long-haul networks to end-customer service deployments, we are a proven leader and innovator in telecommunications network construction, maintenance, and service installation and repair."
+
+        [[params.services.row]]
+
+            [[params.services.row.list]]
+                icon = "fa-wrench"
+                title = "Outside Plant Engineering & Design"
+                description = "Outside-Plant-Engineering-Design.md"
+
+            [[params.services.row.list]]
+                icon = "fa-wrench"
+                title = "Wireline Outside Plant"
+                description = "Wireline-Outside-Plant.md"
+
+            [[params.services.row.list]]
+                icon = "fa-wrench"
+                title = "Inside Plant"
+                description = "Inside-Plant.md"
+
+        [[params.services.row]]
+
+            [[params.services.row.list]]
+                icon = "fa-wrench"
+                title = "Residential Installation & Repair"
+                description = "Residential-Installation-Repair.md"
+
+            [[params.services.row.list]]
+                icon = "fa-wrench"
+                title = "Front-Line Maintenance"
+                description = "Front-Line-Maintenance.md"
+
+            [[params.services.row.list]]
+                icon = "fa-wrench"
+                title = "Business Installation & Repair"
+                description = "Business-Installation-Repair.md"
+
+
+	# Portfolio section
+	[params.portfolio]
+        enable = false
+		# All projects defined in their own files. You can find example projects
+		# at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
+		# at the root of this Hugo site.
+		# For more informtion take a look at the README.
+		title = "Projects"
+		subtitle = ""
+
+		[params.portfolio.modal]
+            client = "Client"
+            date = "Date"
+            category = "Category"
+            buttonText = "Close project"
+
+
+    # About section
+	[params.about]
+        enable = true
+		title = "About Us"
+		subtitle = "EVO.bg has been building and servicing communication networks for customers across Bulgaria since 2003 with unique ability to provide full turnkey communication solutions."
+		endpoint = "Be part<br>of our<br>story!"
+
+		# The events will be listed from the top to the bottom.
+		# All images are stored under 'static/img/about'.
+		# Replace them with your own.
+		[[params.about.events]]
+			img = "vt-sunrise.jpg"
+			date = "2003"
+			title = "Our Humble Beginnings"
+			description = "The company's founding is a result of a joint project between Stoyan Stoyan & Rosen Velikov for creating Telecommunication operator of new generation."
+
+		[[params.about.events]]
+			img = "tower.png"
+			date = "2004"
+			title = "First alternative SDH RRL in Veliko Tarnovo"
+			description = "EVO.bg & Neterra deployed first SDH/STM 155MBits link (67km) to Veliko Tarnovo. EVO.bg's Tecnical Services team installed a 30 m self supporting tower on Arbanasi Hill, Veliko Tarnovo. We installed and tested two SDH antenna systems that provide 155Mbits communications for central-north Bulgaria. In addition, EVO.bg designed, supplied, and installed a 2 kilometers power line and 4 kilometers fiber optic wireline."
+
+		[[params.about.events]]
+			img = "vt-fttx.jpg"
+			date = "2004-2006"
+			title = "Veliko Tarnovo region FTTB rollout"
+			description = "In a push to improve broadband access across the region, the EVO.bg partnered with local organizations to install and upgrade fiber optic cables in 3 cites and 18 rural and under-serviced counties. When completed, more than 70 000 Households - including education, healthcare, government and public safety institutions - was directly connected with over 500 kilometers of new or upgraded fiber."
+
+		[[params.about.events]]
+			img = "elena.jpg"
+			date = "2007"
+			title = "Veliko Tarnovo - Elena Fiber Optic Networking"
+			description = "EVO.bg provided connectivity between Veliko Tarnovo and Gorna Oryahovitza and Lyaskovetz and Elena by performing ongoing Outside Plant and Inside Plant construction of the fiber optic network (85+ kilometers).<br>This work also entails deployment of conduit and fiber infrastructure to provide connectivity to surrounding construction camps.<br>The methods of construction being utilized include: plowing, horzontal directional drilling (HDD), trenching, fiber pulling, fiber jetting, supply and installation of cabinets, panels and associated components, splicing and testing"
+
+        [[params.about.events]]
+			img = "solar.jpg"
+			date = "2012"
+			title = "EUSunday CCTV & M2M"
+			description = "EVO.bg deployed over 160 HD IP cameras and 1000+ Digital Sensors across 4 of the biggest solar power plants in Bulgaria over the course of this nine month project that was delivered on time and on budget. Consistent high quality work and finish, professional conduct and presentation, and diligent safety practices were of the highest importance in the successful execution of this highly visible project performed in challenging environments."
+
+        [[params.about.events]]
+			img = "hsi.jpg"
+			date = "2011-2015"
+			title = "HSI/IPTV Installation & Repair"
+			description = "A major telecommunications provider in Bulgaria enjoying tremendous customer growth with their residential HSI & IPTV services reached out to EVO.bg to help support their workforce that was challenged to keep up with their customer demand.<br>EVO.bg’s extensive experience performing high volumes of residential installation and repair services and our track record for rapidly developing large local workforces that deliver consistent, high quality services enabled Ledcor to be the best choice for our client.<br>By leveraging EVO.bg’s workforce, our client has been able to achieve the capacity to fulfill their customer demand while raising productivity and quality levels."
+
+        [[params.about.events]]
+			img = "bcc.png"
+			date = "Sep 2014"
+			title = "Member of Bulgarian Construction Chamber"
+			description = "EVO.bg became a member of Bulgarian Construction Chamber"
+
+
+	# Team section
+	[params.team]
+        enable = true
+		title = "Our amazing team"
+		subtitle = "Our team of over 100 field technicians is strategically placed to be within a two hour drive from the telecommunications networks that service most of Bulgaria and excel at offering solutions that deliver quality, efficiency, and flexibility to communications and technology providers"
+		description = "Our work is challenging, our equipment is huge and we have been honored with our fair share of awards. But there is something different in the air at EVO.bg. It’s a spirit of family and an uncompromised commitment to each other. Every member of our EVO.bg team contributes and is part of our story.<br><b>These are our values and we live by them:</b><br><b>Safety</b> > Zero accidents through best practices<br><b>Quality</b> > Continuous measurements and improvement<br><b>Integrity</b> > Ethical, honest, consistent, highly regarded<br><b>Sustainability</b> > Balancing People, Planet, and Profit<br><b>Success</b> > Client and employee satisfaction, shareholder value"
+
+		# All team member's pictures are stored under 'static/img/team'.
+		# Replace them with your own too.
+		[[params.team.members]]
+			img = "Outside Plant Engineering & Design.jpg"
+			name = "Engineering & Design"
+			position = "10+"
+
+
+		[[params.team.members]]
+			img = "Residential Installation & Repair.jpg"
+			name = "Installation & Repair"
+			position = "100+"
+
+		[[params.team.members]]
+			img = "Inside Plant.jpg"
+			name = "Inside Plant"
+			position = "10+"
+
+		[[params.team.members]]
+			img = "Wireline Outside Plant.jpg"
+			name = "Wireline Outside Plant"
+			position = "90+"
+
+	# Client section
+    [params.clients_list]
+        enable = false
+
+    	# All the clients' logos are stored under 'static/img/logos'.
+    	# Replace them with your clients's logos.
+    	[[params.clients]]
+    		logo = "envato.jpg"
+    		link = "#"
+
+    	[[params.clients]]
+    		logo = "designmodo.jpg"
+    		link = "#"
+
+    	[[params.clients]]
+    		logo = "themeforest.jpg"
+    		link = "#"
+
+    	[[params.clients]]
+    		logo = "creative-market.jpg"
+    		link = "#"
+
+
+	# Contact section
+	[params.contact]
+        enable = true
+		title = "Contact us"
+		subtitle  = "EVO ood<br>BULGARIA, Veliko Tarnovo, 25 Bulgaria blvd, 8 floor<br>+359-88-994-2424<br>info@evo.bg"
+		buttonText = "Send message"
+
+		# 'warning' defines error messages for invalid inputs
+		[params.contact.form.name]
+			text = "Your Name *"
+			warning = "Please enter your name."
+
+		[params.contact.form.email]
+			text = "Your Email *"
+			warning = "Please enter your email address."
+
+		[params.contact.form.phone]
+			text = "Your Phone *"
+			warning = "Please enter your phone number."
+
+		[params.contact.form.message]
+			text = "Your Message *"
+			warning = "Please enter a message."
+
+
+	# Footer section
+	[params.footer]
+        enable = true
+		copyright = "Published under the Apache License 2.0."
